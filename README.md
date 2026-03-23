@@ -141,7 +141,7 @@ token: {seu_token}
 
 ---
 
-## 📌 Rotas
+## Rotas
 
 | Operação           | Método  | Endpoint            | Entrada (JSON)           | Protegido |
 |------------------|--------|---------------------|--------------------------|----------|
@@ -155,9 +155,9 @@ token: {seu_token}
 
 ---
 
-# 📊 Relatórios e Rankings (Implementações Adicionais)
+# Relatórios e Rankings (Implementações Adicionais)
 
-## 🏆 Ranking Geral
+## Ranking Geral
 
 GET /ranking/days/:days
 
@@ -167,13 +167,13 @@ Exemplo:
 
 Retorna os usuários que mais consumiram café nos últimos 7 dias.
 
-## 📅 Histórico Diário
+## Histórico Diário
 
 Serviço responsável por listar o histórico de registros por dia de um usuário específico.
 
 ---
 
-# 🛡️ Regras de Negócio e Validações
+# Regras de Negócio e Validações
 
 ### Unicidade de E-mail
 O sistema valida se o usuário já existe no momento do cadastro.
@@ -193,7 +193,7 @@ O endpoint de registro de café:
 
 ---
 
-# 👤 Autor
+# Autor
 
 Thiago da Luz Barbosa
 
