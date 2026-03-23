@@ -28,6 +28,7 @@ API REST desenvolvida em **PHP Nativo** e **MySQL** para controle e monitorament
 
 ## Estrutura do Projeto
 
+```text
 coffee-api/
 ├── config/         # Conexão com banco e scripts SQL
 ├── controllers/    # Processamento de requisições e regras de negócio
@@ -38,7 +39,7 @@ coffee-api/
 ├── utils/          # Padronização de respostas JSON
 ├── index.php       # Ponto de entrada da aplicação
 └── test.html       # Interface simples para testes de integração
-
+```
 ---
 
 # ⚙️ Instalação e Configuração
