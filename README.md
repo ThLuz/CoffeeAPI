@@ -42,7 +42,7 @@ coffee-api/
 ```
 ---
 
-# ⚙️ Instalação e Configuração
+# Instalação e Configuração
 
 ## 1. Banco de Dados
 
@@ -80,9 +80,60 @@ Você pode utilizar:
 
 ---
 
-# 📡 Endpoints da API
+## Endpoints da API
 
-## 🔐 Autenticação
+### Usuários e Autenticação
+
+#### Cadastro de Usuário
+`POST /users/`
+- **Entrada (JSON):** `email`, `name`, `password`
+- **Saída:** Objeto do usuário criado.
+
+#### Login
+`POST /login`
+- **Entrada (JSON):** `email`, `password`
+- **Saída:** `token`, `iduser`, `email`, `name`, `drinkCounter`
+
+#### Listar Usuários
+`GET /users/`
+- **Header:** `Authorization: Bearer <token>`
+- **Saída:** Array com todos os usuários.
+
+#### Detalhes do Usuário
+`GET /users/:iduser`
+- **Header:** `Authorization: Bearer <token>`
+- **Saída:** `iduser`, `name`, `email`, `drinkCounter`
+
+#### Atualizar Usuário
+`PUT /users/:iduser`
+- **Header:** `Authorization: Bearer <token>`
+- **Entrada (JSON):** `email`, `name`, `password`
+
+#### Remover Usuário
+`DELETE /users/:iduser`
+- **Header:** `Authorization: Bearer <token>`
+
+---
+
+### Consumo de Café
+
+#### Registrar Consumo
+`POST /users/:iduser/drink`
+- **Descrição:** Incrementa a quantidade de vezes que o usuário bebeu café.
+- **Header:** `Authorization: Bearer <token>`
+- **Entrada (JSON):** `drink` (int)
+- **Saída:** `iduser`, `email`, `name`, `drinkCounter`
+
+---
+
+### Ranking e Relatórios
+
+#### Ranking por Período
+`GET /ranking/days/:days`
+- **Exemplo:** `/ranking/days/7` (Ranking dos últimos 7 dias).
+- **Saída:** Lista de usuários ordenada pelo consumo no período.
+
+## Autenticação
 
 Após realizar o login, utilize o token retornado no header de todas as requisições protegidas:
 
